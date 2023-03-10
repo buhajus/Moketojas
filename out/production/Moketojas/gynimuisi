@@ -1,0 +1,26 @@
+1. Sukurti bazinę klasę Mokėtojas + interface + package:
+    mokėtojo kodas sistemoje;
+    vardas;
+    pavardė;
+    adresas;
+    suma.
+
+2. Sukurti išvestinę klasę Telefonas + interface + package:
+    numeris.
+
+3. Sukurti išvestinę klasę Internetas + interface + package:
+    ip.
+
+4. Sukurti išvestinę klasę Šildymas + interface + package:
+    kubai.
+
+5. Sukurti po 3 objektus kiekvienos klasės.
+6. Sudėti į sąrašą visus objektus ir atspausdinti kiek viso reikės mokėti už telefoną ir internetą.
+
+Papildomai (balai neskiriami, bet gaunate karmos taškų):
+7. Sukeisti didžiausios ir mažiausios sąskaitos už šildymą sumas vietomis.
+8. Jeigu paskutiniai abonento telefono numerio gale esantys skaičiai yra '69', pakeisti sąskaitos už telefoną sumą irgi į 69 eur.
+
+PASTABA:
+    Gynimui kuriamas naujas projektas (!)
+    Pasirinkti tinkamiausius tipus klasių kintamiesiems.

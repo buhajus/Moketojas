@@ -1,11 +1,5 @@
 package lt.base;
 
-import lt.base.paslaugos.internetas.Internetas;
-import lt.base.paslaugos.sildymas.Sildymas;
-import lt.base.paslaugos.telefonas.Telefonas;
-
-import java.security.PrivateKey;
-
 public class MoketojasImpl implements Moketojas {
 
     private int moketojoId;

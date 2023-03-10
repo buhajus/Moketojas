@@ -12,13 +12,18 @@ public class SildymasImpl extends MoketojasImpl implements Sildymas {
         return suvartotiKubai;
     }
 
+    public SildymasImpl(int moketojoId, String vardas, String pavarde, String adresas, double suma, double suvartotiKubai) {
+        super(moketojoId, vardas, pavarde, adresas, suma);
+        this.suvartotiKubai = suvartotiKubai;
+    }
+
     public SildymasImpl(){
 
     }
 
     @Override
     public String toString() {
-        return "SildymasImpl{" +
+        return super.toString() + "SildymasImpl{" +
                 "suvartotiKubai=" + suvartotiKubai +
                 '}';
     }
