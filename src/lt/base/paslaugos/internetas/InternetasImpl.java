@@ -26,7 +26,7 @@ public class InternetasImpl extends MoketojasImpl implements Internetas {
 
     @Override
     public String toString() {
-        return super.toString() + "InternetasImpl{" +
+        return super.toString() + "{" +
                 "ipAdresas='" + ipAdresas + '\'' +
                 '}';
     }

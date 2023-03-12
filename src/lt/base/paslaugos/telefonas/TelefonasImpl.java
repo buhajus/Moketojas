@@ -17,7 +17,7 @@ public class TelefonasImpl extends MoketojasImpl implements Telefonas {
 
     @Override
     public String toString() {
-        return super.toString() + "TelefonasImpl{" +
+        return super.toString() + "{" +
                 "telefonoNr='" + telefonoNr + '\'' +
                 '}';
     }
