@@ -1,10 +1,5 @@
 package lt.base;
 
-import lt.base.paslaugos.internetas.InternetasImpl;
-import lt.base.paslaugos.sildymas.SildymasImpl;
-import lt.base.paslaugos.telefonas.Telefonas;
-import lt.base.paslaugos.telefonas.TelefonasImpl;
-
 public class MoketojasImpl implements Moketojas {
 
     private int moketojoId;
@@ -73,28 +68,10 @@ public class MoketojasImpl implements Moketojas {
                 ", vardas='" + vardas + '\'' +
                 ", pavarde='" + pavarde + '\'' +
                 ", adresas='" + adresas + '\'' +
-                ", suma=" + suma +
-                '}';
+                ", suma=" + suma ;
     }
 
-    public void visoUzIntIrTel(MoketojasImpl sarasas[]) {
-        double sum = 0;
-        for (MoketojasImpl mok : sarasas) {
 
-            if (mok instanceof InternetasImpl) {
-                InternetasImpl inter = (InternetasImpl) mok;
-                System.out.println(inter.getSuma());
-                sum += inter.getSuma();
-            }
-            if (mok instanceof TelefonasImpl) {
-                TelefonasImpl tel = (TelefonasImpl) mok;
-                System.out.println(tel.getSuma());
-                sum += tel.getSuma();
-            }
-
-        }
-        System.out.println("Mokestis už internetą ir telefoną : " + sum);
-    }
 
     //7. Sukeisti didžiausios ir mažiausios sąskaitos už šildymą sumas vietomis.
 

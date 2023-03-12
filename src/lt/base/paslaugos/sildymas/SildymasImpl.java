@@ -23,7 +23,7 @@ public class SildymasImpl extends MoketojasImpl implements Sildymas {
 
     @Override
     public String toString() {
-        return super.toString() + "{" +
+        return super.toString() +", "+
                 "suvartotiKubai=" + suvartotiKubai +
                 '}';
     }

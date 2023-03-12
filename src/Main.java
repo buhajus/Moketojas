@@ -2,7 +2,6 @@ import lt.base.MoketojasImpl;
 import lt.base.paslaugos.internetas.Internetas;
 import lt.base.paslaugos.internetas.InternetasImpl;
 import lt.base.paslaugos.sildymas.SildymasImpl;
-import lt.base.paslaugos.telefonas.Telefonas;
 import lt.base.paslaugos.telefonas.TelefonasImpl;
 
 public class Main {
@@ -37,9 +36,12 @@ public class Main {
         MoketojasImpl sarasas[] = {ip1, ip2, ip3, telefonas1, telefonas2, telefonas3, sildymas1, sildymas2, sildymas3};
 
 
-        moketojas.visoUzIntIrTel(sarasas);
+        lastDigits(sarasas);
+        visoUzIntIrTel(sarasas);
         System.out.println("Min index: " + minIndex(sarasas));
         System.out.println("Max index: " + maxIndex(sarasas));
+
+
 
         for (MoketojasImpl m : sarasas) {
             System.out.println(m);
@@ -84,5 +86,34 @@ public class Main {
         return index;
     }
 
+    public static void visoUzIntIrTel(MoketojasImpl sarasas[]) {
+        double sum = 0;
+        for (MoketojasImpl mok : sarasas) {
+
+            if (mok instanceof InternetasImpl) {
+                InternetasImpl inter = (InternetasImpl) mok;
+                sum += inter.getSuma();
+            }
+            if (mok instanceof TelefonasImpl) {
+                TelefonasImpl tel = (TelefonasImpl) mok;
+                sum += tel.getSuma();
+            }
+
+        }
+        System.out.println("Mokestis už internetą ir telefoną : " + sum);
+    }
+
+    public static void lastDigits(MoketojasImpl sarasas[]){
+
+        for (MoketojasImpl mok : sarasas){
+            if(mok instanceof TelefonasImpl){
+                TelefonasImpl tel = (TelefonasImpl) mok;
+                if(tel.getTelefonoNr().endsWith("69")){
+                    tel.setSuma(69);
+                }
+            }
+        }
+
+    }
 
 }
