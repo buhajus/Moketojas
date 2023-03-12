@@ -51,7 +51,6 @@ public class Main {
     }
 
     public static int minIndex(MoketojasImpl sarasas[]) {
-        SildymasImpl sildymas = new SildymasImpl();
         int index = -1;
         double min = 9999;
         for (MoketojasImpl mok : sarasas) {
@@ -77,7 +76,7 @@ public class Main {
             if (mok instanceof SildymasImpl) {
                 SildymasImpl sild = (SildymasImpl) mok;
                 if (sild.getSuma() > max) {
-                    max = sild.getSuma();
+                    max =  sild.getSuma();
                     index++;
                 }
             }
@@ -113,7 +112,6 @@ public class Main {
                 }
             }
         }
-
     }
 
 }
