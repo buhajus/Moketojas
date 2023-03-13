@@ -56,7 +56,7 @@ public class Main {
 
         SildymasImpl sildymas1 = new SildymasImpl(125, "Vilis", "Moris", "Traku 15- 50", 1016.00, 15.5);
         SildymasImpl sildymas2 = new SildymasImpl(369, "Tadas", "Vilkas", "Miško 15- 50", 12.50, 5.5);
-        SildymasImpl sildymas3 = new SildymasImpl(11, "Ala", "Pugačiova", "Aleja no 5", 102.00, 215.5);
+        SildymasImpl sildymas3 = new SildymasImpl(11, "Ala", "Pugačiova", "Aleja no 5", 10022.00, 215.5);
 
         InternetasImpl ip1 = new InternetasImpl(125, "Vilis", "Moris", "Traku 15- 50", 16.50, "192.168.1.69");
         InternetasImpl ip2 = new InternetasImpl(369, "Tadas", "Vilkas", "Miško 15- 50", 12.50, "192.168.1.09");
@@ -114,16 +114,21 @@ public class Main {
         return index;
     }
 
+
     public static int maxIndex(MoketojasImpl sarasas[]) {
         int index = 0;
         double max = sarasas[0].getSuma();
 
         for (MoketojasImpl mok : sarasas) {
             if (mok instanceof SildymasImpl) {
+
                 SildymasImpl sild = (SildymasImpl) mok;
-                if (sild.getSuma() >= max) {
-                    max = sild.getSuma();
-                    index++;
+
+                    if (sild.getSuma() > max) {
+                        for (int i = 0; i < sarasas.length; i++) {
+                        max = sild.getSuma();
+                        index = i;
+                    }
                 }
             }
         }
