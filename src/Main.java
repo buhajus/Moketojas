@@ -34,13 +34,8 @@ public class Main {
             System.out.println(m);
         }
         System.out.println();
-        for (MoketojasImpl mok : sarasas()) {
-            if (mok instanceof SildymasImpl) {
-                SildymasImpl sild = (SildymasImpl) mok;
-                System.out.println(sild.getSuma());
-            }
-        }
 
+       spausdintiMasyva(sildymoKainos(sarasas()));
     }
 
     public static MoketojasImpl[] sarasas() {
@@ -95,6 +90,29 @@ public class Main {
         }
     }
 
+    public static MoketojasImpl[] sildymoKainos(MoketojasImpl[] sarasas) {
+        int index = 0;
+        MoketojasImpl[] masyvas = new MoketojasImpl[3];
+        for (MoketojasImpl mok : sarasas()) {
+            if (mok instanceof SildymasImpl) {
+                SildymasImpl sild = (SildymasImpl) mok;
+                if (sild.getSuma() > 0) {
+
+                    for (int i = 0; i < 3; i++) {
+                        masyvas[i] =
+
+                    }
+                    index++;
+                }
+
+
+            }
+        }
+
+
+        return  masyvas;
+    }
+
     public static int minIndex(MoketojasImpl sarasas[]) {
         int index = -1;
 
@@ -114,6 +132,7 @@ public class Main {
         return index;
     }
 
+//reikia tikrinti tik is sildymas
 
     public static int maxIndex(MoketojasImpl sarasas[]) {
         int index = 0;
@@ -124,8 +143,8 @@ public class Main {
 
                 SildymasImpl sild = (SildymasImpl) mok;
 
-                    if (sild.getSuma() > max) {
-                        for (int i = 0; i < sarasas.length; i++) {
+                if (sild.getSuma() > max) {
+                    for (int i = 0; i < sarasas.length; i++) {
                         max = sild.getSuma();
                         index = i;
                     }
