@@ -24,11 +24,21 @@ public class Main {
         for (MoketojasImpl m : sarasas()) {
             System.out.println(m);
         }
-       spausdintiMasyva(swap(sarasas(), minIndex(sarasas()), maxIndex(sarasas())));
+
+        System.out.println();
+        spausdintiMasyva(swap(sarasas(), minIndex(sarasas()), maxIndex(sarasas())));
+
 
         System.out.println();
         for (MoketojasImpl m : sarasas()) {
             System.out.println(m);
+        }
+        System.out.println();
+        for (MoketojasImpl mok : sarasas()) {
+            if (mok instanceof SildymasImpl) {
+                SildymasImpl sild = (SildymasImpl) mok;
+                System.out.println(sild.getSuma());
+            }
         }
 
     }
@@ -46,13 +56,13 @@ public class Main {
 
         SildymasImpl sildymas1 = new SildymasImpl(125, "Vilis", "Moris", "Traku 15- 50", 1016.00, 15.5);
         SildymasImpl sildymas2 = new SildymasImpl(369, "Tadas", "Vilkas", "Miško 15- 50", 12.50, 5.5);
-        SildymasImpl sildymas3 = new SildymasImpl(11, "Ala", "Pugačiova", "Aleja no 5", 1.00, 215.5);
+        SildymasImpl sildymas3 = new SildymasImpl(11, "Ala", "Pugačiova", "Aleja no 5", 102.00, 215.5);
 
         InternetasImpl ip1 = new InternetasImpl(125, "Vilis", "Moris", "Traku 15- 50", 16.50, "192.168.1.69");
         InternetasImpl ip2 = new InternetasImpl(369, "Tadas", "Vilkas", "Miško 15- 50", 12.50, "192.168.1.09");
         InternetasImpl ip3 = new InternetasImpl(11, "Ala", "Pugačiova", "Aleja no 5", 16.50, "192.168.1.119");
 
-        MoketojasImpl sarasas[] = {moketojas1, moketojas2, moketojas3, ip1, ip2, ip3, telefonas1, telefonas2, telefonas3, sildymas1, sildymas2, sildymas3};
+        MoketojasImpl sarasas[] = {ip1, ip2, ip3, telefonas1, telefonas2, telefonas3, sildymas1, sildymas2, sildymas3};
 
         return sarasas;
     }
@@ -62,28 +72,32 @@ public class Main {
 
         for (MoketojasImpl mok : masyvas) {
             if (mok instanceof SildymasImpl) {
-                //SildymasImpl sild = (SildymasImpl) mok;
+                SildymasImpl sild = (SildymasImpl) mok;
                 for (int i = 0; i < sarasas().length; i++) {
+
+                    sild.setSuma(50);
                     masyvas[i] = sarasas[i];
                 }
             }
-        }
 
+        }
 
         MoketojasImpl temp = masyvas[max];
         masyvas[max] = masyvas[min];
         masyvas[min] = temp;
-
         return masyvas;
     }
 
-    public  static void spausdintiMasyva(MoketojasImpl masyvas[]) {
+
+    public static void spausdintiMasyva(MoketojasImpl masyvas[]) {
         for (int i = 0; i < masyvas.length; i++) {
             System.out.println(masyvas[i] + ",");
         }
     }
+
     public static int minIndex(MoketojasImpl sarasas[]) {
         int index = -1;
+
         double min = 9999;
         for (MoketojasImpl mok : sarasas) {
             if (mok instanceof SildymasImpl) {
@@ -107,7 +121,7 @@ public class Main {
         for (MoketojasImpl mok : sarasas) {
             if (mok instanceof SildymasImpl) {
                 SildymasImpl sild = (SildymasImpl) mok;
-                if (sild.getSuma() > max) {
+                if (sild.getSuma() >= max) {
                     max = sild.getSuma();
                     index++;
                 }
