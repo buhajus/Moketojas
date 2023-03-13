@@ -12,6 +12,7 @@ public class TelefonasImpl extends MoketojasImpl implements Telefonas {
     public TelefonasImpl(int moketojoId, String vardas, String pavarde, String adresas, double suma, String telefonoNr) {
         super(moketojoId, vardas, pavarde, adresas, suma);
         this.telefonoNr = telefonoNr;
+        moketojoId = 5;
 
     }
 
