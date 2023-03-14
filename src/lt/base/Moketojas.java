@@ -22,6 +22,6 @@ interface Moketojas {
 
     double getSuma();
 
-    void setSuma(double suma);
+    double setSuma(double suma);
 
 }

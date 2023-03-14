@@ -44,8 +44,9 @@ public class MoketojasImpl implements Moketojas {
         return suma;
     }
 
-    public void setSuma(double suma) {
+    public double setSuma(double suma) {
         this.suma = suma;
+        return suma;
     }
 
 
