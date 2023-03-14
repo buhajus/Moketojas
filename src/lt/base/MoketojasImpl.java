@@ -58,6 +58,15 @@ public class MoketojasImpl implements Moketojas {
         this.suma = suma;
     }
 
+    public MoketojasImpl(MoketojasImpl list){
+        this.moketojoId=list.getMoketojoId();
+        this.vardas = list.getVardas();
+        this.pavarde=list.getPavarde();
+        this.adresas=list.adresas;
+        this.suma= list.getSuma();
+
+    }
+
     public MoketojasImpl() {
 
     }

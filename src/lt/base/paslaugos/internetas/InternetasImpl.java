@@ -20,6 +20,11 @@ public class InternetasImpl extends MoketojasImpl implements Internetas {
         this.ipAdresas = ipAdresas;
     }
 
+    public InternetasImpl(MoketojasImpl list, String ipAdresas){
+        super(list);
+        this.ipAdresas=ipAdresas;
+    }
+
     public InternetasImpl(String ipAdresas) {
         this.ipAdresas = ipAdresas;
     }
